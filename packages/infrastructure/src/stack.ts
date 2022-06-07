@@ -9,7 +9,7 @@ import * as lambda from 'aws-cdk-lib/aws-lambda';
 const lambdaDir = path.join('../application');
 
 export default class DefaultStack extends cdk.Stack {
-  constructor(scope: Construct, id: string, props: cdk.Props) {
+  constructor(scope: Construct, id: string, props: cdk.StackProps) {
     super(scope, id, props);
 
     const lambdaHandler = new lambda.DockerImageFunction(this, 'LambdaHandler', {
